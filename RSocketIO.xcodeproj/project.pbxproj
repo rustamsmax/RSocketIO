@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		4A1423C625F44923003E1B40 /* RSocketIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1423BC25F44923003E1B40 /* RSocketIO.framework */; };
 		4A1423CB25F44923003E1B40 /* RSocketIOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1423CA25F44923003E1B40 /* RSocketIOTests.swift */; };
 		4A1423CD25F44923003E1B40 /* RSocketIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1423BF25F44923003E1B40 /* RSocketIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4A1423D925F44A51003E1B40 /* RSocketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1423D825F44A51003E1B40 /* RSocketIO.swift */; };
+		4A1423E525F44E2D003E1B40 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1423E425F44E2D003E1B40 /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,7 @@
 		4A1423C525F44923003E1B40 /* RSocketIOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSocketIOTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A1423CA25F44923003E1B40 /* RSocketIOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSocketIOTests.swift; sourceTree = "<group>"; };
 		4A1423CC25F44923003E1B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A1423D825F44A51003E1B40 /* RSocketIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSocketIO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1423E525F44E2D003E1B40 /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +77,7 @@
 			children = (
 				4A1423BF25F44923003E1B40 /* RSocketIO.h */,
 				4A1423C025F44923003E1B40 /* Info.plist */,
+				4A1423D825F44A51003E1B40 /* RSocketIO.swift */,
 			);
 			path = RSocketIO;
 			sourceTree = "<group>";
@@ -114,6 +119,9 @@
 			dependencies = (
 			);
 			name = RSocketIO;
+			packageProductDependencies = (
+				4A1423E425F44E2D003E1B40 /* SocketIO */,
+			);
 			productName = RSocketIO;
 			productReference = 4A1423BC25F44923003E1B40 /* RSocketIO.framework */;
 			productType = "com.apple.product-type.framework";
@@ -147,6 +155,7 @@
 				TargetAttributes = {
 					4A1423BB25F44923003E1B40 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					4A1423C425F44923003E1B40 = {
 						CreatedOnToolsVersion = 12.2;
@@ -162,6 +171,9 @@
 				Base,
 			);
 			mainGroup = 4A1423B225F44923003E1B40;
+			packageReferences = (
+				4A1423E325F44E2D003E1B40 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 4A1423BD25F44923003E1B40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -194,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1423D925F44A51003E1B40 /* RSocketIO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +354,7 @@
 		4A1423D125F44923003E1B40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +370,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rsteam.RSocketIO;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +379,7 @@
 		4A1423D225F44923003E1B40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +403,7 @@
 		4A1423D425F44923003E1B40 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RSocketIOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +421,7 @@
 		4A1423D525F44923003E1B40 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RSocketIOTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -449,6 +467,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4A1423E325F44E2D003E1B40 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 15.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4A1423E425F44E2D003E1B40 /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4A1423E325F44E2D003E1B40 /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4A1423B325F44923003E1B40 /* Project object */;
 }
