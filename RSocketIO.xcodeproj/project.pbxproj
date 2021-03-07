@@ -12,6 +12,7 @@
 		4A1423CD25F44923003E1B40 /* RSocketIO.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A1423BF25F44923003E1B40 /* RSocketIO.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A1423D925F44A51003E1B40 /* RSocketIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1423D825F44A51003E1B40 /* RSocketIO.swift */; };
 		4A1423E525F44E2D003E1B40 /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 4A1423E425F44E2D003E1B40 /* SocketIO */; };
+		4A1423E925F45267003E1B40 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 4A1423E825F45267003E1B40 /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		4A1423CA25F44923003E1B40 /* RSocketIOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSocketIOTests.swift; sourceTree = "<group>"; };
 		4A1423CC25F44923003E1B40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A1423D825F44A51003E1B40 /* RSocketIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSocketIO.swift; sourceTree = "<group>"; };
+		4A1423E825F45267003E1B40 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		4A1423B225F44923003E1B40 = {
 			isa = PBXGroup;
 			children = (
+				4A1423E825F45267003E1B40 /* LICENSE */,
 				4A1423BE25F44923003E1B40 /* RSocketIO */,
 				4A1423C925F44923003E1B40 /* RSocketIOTests */,
 				4A1423BD25F44923003E1B40 /* Products */,
@@ -189,6 +192,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A1423E925F45267003E1B40 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
