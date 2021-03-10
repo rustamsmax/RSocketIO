@@ -130,7 +130,7 @@ public class RSocketIO: NSObject {
       let item = data[i]
       if let itemData = (item as? String)?.data(using: .utf8) {
         do {
-          let itemObject = try JSONSerialization.jsonObject(with: itemData, options: []) as? [String: Any]
+            let itemObject = try JSONSerialization.jsonObject(with: itemData, options: []) //as? [String: Any]
           result.append(itemObject)
         } catch {
           print(error.localizedDescription)
@@ -139,12 +139,12 @@ public class RSocketIO: NSObject {
         result.append(item)
       }
     }
-    socket.emit(event, with: result)
+    socket.emit(event, result)
   }
   
   @objc
   public func emit(event: String, string: String) {
-    socket.emit(event, with: [string])
+    socket.emit(event, [string])
   }
 }
 
